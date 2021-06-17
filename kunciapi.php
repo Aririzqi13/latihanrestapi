@@ -10,7 +10,7 @@
 	        return true;
 	    } else {
 	        return false;
-	    }
+	    } 
 	}
 	
 	function jsonOut($status, $message, $data) {

@@ -7,7 +7,7 @@
 	
 	    $kon = mysqli_connect($server, $user, $pass, $db);
 	    if (!$kon) {
-	        die("gagal!");
+	        die("gagal!"); 
 	    } 
 	
 	?>
