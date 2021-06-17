@@ -1,19 +1,19 @@
 <?php
 	
-	    include "conn.php";
+	    include "koneksi.php";
 	
-	    // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	    
-	    //     $namanya = $_REQUEST['namanya'];
-	    //     echo $nama;
-	    // } else
+	    	     $namanya = $_REQUEST['Ari'];
+	    	echo $namanya;
+	    } else
 	    
 	    if ($_SERVER['REQUEST_METHOD'] == 'GET'){
-	        $qu = "select * from mahasiswa";
-	        $ko = mysqli_query($conn, $qu);
-	        while ($data = mysqli_fetch_array($ko)) {
-	            // var_dump($data);
-	            $datanya[] = array(
+	        $q1 = "select * from mahasiswa";
+	        $q2 = mysqli_query($kon, $q1);
+	        while ($data = mysqli_fetch_array($q2)) {
+	            
+	            $datanew[] = array(
 	                'npm' => $data['npm'],
 	                'nama' => $data['nama'],
 	                'jurusan' => $data['jurusan']
@@ -23,7 +23,7 @@
 	        $respon[] = array(
 	            'status' => 'OK',
 	            'kode' => '999',
-	            'data' => $datanya
+	            'data' => $datanew
 	        );
 	        header("Content-type: application/json");
 	        echo json_encode($respon);

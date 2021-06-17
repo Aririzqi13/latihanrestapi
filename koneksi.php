@@ -5,8 +5,8 @@
 	    $pass = "root";
 	    $db = "wsmhs";
 	
-	    $conn = mysqli_connect($server, $user, $pass, $db);
-	    if (!$conn) {
+	    $kon = mysqli_connect($server, $user, $pass, $db);
+	    if (!$kon) {
 	        die("gagal!");
 	    } 
 	

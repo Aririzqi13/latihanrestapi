@@ -1,12 +1,12 @@
 <?php
 	
-	function getKey() {
-	    return ["1234", "rahasia", "xyz"];
+	function key() {
+	    return ["347", "kunci1", "kunciapinya"];
 	}
 	
-	function isValid($input) {
+	function validasi($input) {
 	    $apikey = $input["api_key"];
-	    if (in_array($apikey, getKey())) {
+	    if (in_array($apikey, key())) {
 	        return true;
 	    } else {
 	        return false;
@@ -20,19 +20,18 @@
 	    echo json_encode($respon);
 	}
 	
-	function getFilm() {
+	function film() {
 	    $film = [
-	        ["title" => "FF9", "konten" => "film ini film ke-9"],
-	        ["title" => "FF1", "konten" => "film ini film ke-1"],
-	        ["title" => "FF2", "konten" => "film ini film ke-2"]
+	        ["title" => "SIUNYIL1", "kont" => "film ini film Si Unyil 1"],
+	        ["title" => "SIUNYIL2", "kont" => "film ini film  Si Unyil 2"]
 	    ];
 	    return $film;
 	}
 	
-	if (isValid($_GET)) {
-	    jsonOut("berhasil", "apikey valid", getFilm());
+	if (validasi($_GET)) {
+	    jsonOut("success", "apikey sesuai!", film());
 	} else {
-	    jsonOut("gagal", "apikey not valid!!!", null);
+	    jsonOut("failed", "apikey tidak sesui!", null);
 	}
 	
 	?>
