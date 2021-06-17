@@ -1,12 +1,6 @@
 <?php
 	
 	    include "koneksi.php";
-	
-	     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	    
-	    	     $namanya = $_REQUEST['Ari'];
-	    	echo $namanya;
-	    } else
 	    
 	    if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 	        $q1 = "select * from mahasiswa";
